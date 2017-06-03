@@ -109,3 +109,21 @@ Date:   Sat Jun 3 12:03:14 2017 -0300
 
 
 Vemos que somente um usuário fez um commit. Mostra-se também a data, etc.
+
+Depois de criar no github um repositório, no caso "curso_git", eu tenho que apontar meu repositório local para o repositório criado.
+
+Faço isso pegando o endereço (https ou ssh) do repositório criado.
+
+https://github.com/Colombiano/curso_git.git (https)
+git@github.com:Colombiano/curso_git.git (ssh)
+
+E faço um:
+
+$ git remote add origin https://github.com/Colombiano/curso_git.git
+
+Depois disso eu faria um:
+
+$ git push -u origin master
+
+Para jogar tudo no github.
+
