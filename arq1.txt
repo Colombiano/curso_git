@@ -7,9 +7,15 @@ $echo "esse é meu arquivo" >> arq1.txt
 Para gerar a frase inicial e colocar um conteúdo dentro do arq1.txt, criado anteriormente com um simples
 
 $ touch arq1.txt
+<<<<<<< HEAD
 
 Depois, para confirmar o que fiz e ver o que o comando echo tinha gerado dentro do arquivo: 
 
+=======
+
+Depois, para confirmar o que fiz e ver o que o comando echo tinha gerado dentro do arquivo: 
+
+>>>>>>> 09189c28cdf09ed68268a1857a48ccaa3ace1f41
 $cat arq1.txt
 
 Antes disso, da criação do arquivo (touch + echo), eu setei meu usuário no git usando os seguintes comando:
@@ -129,6 +135,7 @@ Para jogar tudo no github.
 
 Teremos a seguinte saída:
 
+<<<<<<< HEAD
                                                                 Username for 'https://github.com': Colombiano
                                                                 Password for 'https://Colombiano@github.com': 
                                                                 Counting objects: 15, done.
@@ -141,4 +148,17 @@ Teremos a seguinte saída:
                                                                  * [new branch]      master -> master
                                                                  Branch master set up to track remote branch master from origin.
 
+=======
+Username for 'https://github.com': Colombiano
+Password for 'https://Colombiano@github.com': 
+Counting objects: 15, done.
+Delta compression using up to 2 threads.
+Compressing objects: 100% (10/10), done.
+Writing objects: 100% (15/15), 2.66 KiB, done.
+Total 15 (delta 4), reused 0 (delta 0)
+remote: Resolving deltas: 100% (4/4), done.
+To https://github.com/Colombiano/curso_git.git
+ * [new branch]      master -> master
+Branch master set up to track remote branch master from origin.
+>>>>>>> 09189c28cdf09ed68268a1857a48ccaa3ace1f41
 
