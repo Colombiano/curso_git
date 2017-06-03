@@ -44,3 +44,31 @@ Para colocar esse arquivo como monitorado/rastreado, basta fazer:
 
 $ git add arq1.txt
 
+Isso irá criar algo assim:
+
+
+# On branch master
+#
+# Initial commit
+#
+# Changes to be committed:
+#   (use "git rm --cached <file>..." to unstage)
+#
+#   new file:   arq1.txt
+
+
+Esse arquivo foi rastreado mas não foi gravado/commitado (dado um commit)
+
+Fazemos isso com um:
+
+$ git commit - m "comentários das aulas"
+
+O -m significa mensagem
+
+Após o comando, ficaríamos assim:
+
+
+[master (root-commit) 7cd4606] comentarios das aulas
+ 1 file changed, 46 insertions(+)
+  create mode 100644 arq1.txt
+
