@@ -82,3 +82,30 @@ $ git commit -m "inserido mais um comentario em relação as aulas"
 [master 8c0060d] inserido mais um comentario em relação as aulas
  1 file changed, 28 insertions(+)
 
+Para ver todas as alterações já feitas neste repositório, bastaria eu fazer:
+
+$ git log
+
+Que teria essa saída:
+
+
+commit 6c8ea10153d9929c387562a24c7064061ceea53e
+Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
+Date:   Sat Jun 3 12:03:14 2017 -0300
+
+    inserido um novo comentario em relação as aulas. Como add e commitar um arqu
+
+    commit 8c0060d7277cf5b7f3c6bb3ca8d36f9d7afacdf6
+    Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
+    Date:   Sat Jun 3 11:58:11 2017 -0300
+
+        inserido mais um comentario em relação as aulas
+
+        commit 7cd46063429aede459ae622b61734a64cabbefbd
+        Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
+        Date:   Sat Jun 3 11:53:44 2017 -0300
+
+            comentarios das aulas
+
+
+Vemos que somente um usuário fez um commit. Mostra-se também a data, etc.
