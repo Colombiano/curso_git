@@ -1,0 +1,46 @@
+esse eh meu arquivo
+
+Usei um $ echo "esse é meu arquivo" >> arq1.txt 
+para gerar a frase inicial e  colocar um conteúdo dentro do arq1.txt. Esse arquivo eu criei com um simples $ touch arq1.txt
+
+Depois, para confirmar o que fiz,  dei  um 
+
+$cat arq1.txt
+
+Para ver o que o echo gerou dentro do arquivo e tudo que tiver dentro dele.
+
+Antes disso eu setei meu usuário no git usando o seguinte comando:
+
+$ git config --global user.name "Colombiano"
+$ git config --global user.email "lpcolombiano@gmail.com"
+
+E depois criei uma pasta, na área de trabalho, chamada "curso_git". Foi nela que criei o arq1.txt, via touch.
+
+Em seguida, para transformar esse diretório em um repositório git, bastaria eu fazer:
+
+$ git init
+
+Estando dentro da pasta.
+
+Toda vez que eu quiser ver o status do meu repositório, basta eu fazer um:
+
+$ git status
+
+Neste caso eu veria algo assim:
+
+# On branch master
+#
+# Initial commit
+#
+# Untracked files:
+#   (use "git add <file>..." to include in what will be committed)
+#
+#   arq1.txt
+nothing added to commit but untracked files present (use "git add" to track)
+
+Com isso eu percebo que meus arquivos, que no caso é um só, não encontra-se rastreado/ monitorado. Cada arquivo no git possui o chamado ciclo de vida do seu status. 
+
+Para colocar esse arquivo como monitorado/rastreado, basta fazer:
+
+$ git add arq1.txt
+
