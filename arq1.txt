@@ -117,7 +117,9 @@ Que teria essa saída:
                                                                 comentarios das aulas
 
 
-Vemos que somente um usuário fez um commit. Mostra-se também a data, etc. Depois de criar no github um repositório, no caso "curso_git", eu tenho que apontar meu repositório local para o repositório criado.
+Vemos que somente um usuário fez um commit. Também podemos ver a data da modificação, o número do hash, etc. 
+
+Assim que eu crie um repositório no github, no caso "curso_git", eu tenho que apontar meu repositório local para o repositório criado.
 
 Faço isso pegando o endereço (https ou ssh) do repositório criado.
 
@@ -135,30 +137,35 @@ Para jogar tudo no github.
 
 Teremos a seguinte saída:
 
-<<<<<<< HEAD
-                                                                Username for 'https://github.com': Colombiano
-                                                                Password for 'https://Colombiano@github.com': 
-                                                                Counting objects: 15, done.
-                                                                Delta compression using up to 2 threads.
-                                                                Compressing objects: 100% (10/10), done.
-                                                                Writing objects: 100% (15/15), 2.66 KiB, done.
-                                                                Total 15 (delta 4), reused 0 (delta 0)
-                                                                remote: Resolving deltas: 100% (4/4), done.
-                                                                To https://github.com/Colombiano/curso_git.git
-                                                                 * [new branch]      master -> master
-                                                                 Branch master set up to track remote branch master from origin.
+                             Username for 'https://github.com': Colombiano
+                             Password for 'https://Colombiano@github.com': 
+                             Counting objects: 15, done.
+                             Delta compression using up to 2 threads.
+                             Compressing objects: 100% (10/10), done.
+                             Writing objects: 100% (15/15), 2.66 KiB, done.
+                             Total 15 (delta 4), reused 0 (delta 0)
+                             remote: Resolving deltas: 100% (4/4), done.
+                             To https://github.com/Colombiano/curso_git.git
+                             * [new branch]      master -> master
+                             Branch master set up to track remote branch master from origin.
 
-=======
-Username for 'https://github.com': Colombiano
-Password for 'https://Colombiano@github.com': 
-Counting objects: 15, done.
-Delta compression using up to 2 threads.
-Compressing objects: 100% (10/10), done.
-Writing objects: 100% (15/15), 2.66 KiB, done.
-Total 15 (delta 4), reused 0 (delta 0)
-remote: Resolving deltas: 100% (4/4), done.
-To https://github.com/Colombiano/curso_git.git
- * [new branch]      master -> master
-Branch master set up to track remote branch master from origin.
->>>>>>> 09189c28cdf09ed68268a1857a48ccaa3ace1f41
+
+Eu posso add vários arquivos por vez fazendo:
+
+$ git add .
+
+Também é importante criar um gitignore para que eu tenha a possibilidade de ter arquivos ou diretórios no meu repositório local que eu não queria enviar para o meu repositório virtual.
+
+$ touch .gitignore
+
+Caso eu queria dizer que um arquivo ou diretório não suba para o github, basta fazer algo assim:
+
+$ echo "arquivo_que_existe_no_repositório_local_mas_que_não_quero_subir_para_o_repositório_virtual.c" >> .gitignore
+$ echo "diretório/" >> .gitignore (para adicionar um diretório que não quero subir)
+
+$ git add . (rastreando tudo que tenho atualmente no meu repositório local)
+
+$ git commit -m "adicionado gitignore" (realizando o commit)
+
+$ git push -u origin master
 
