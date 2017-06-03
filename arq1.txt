@@ -44,6 +44,7 @@ Para colocar esse arquivo como monitorado/rastreado, basta fazer:
 
 $ git add arq1.txt
 
+
 Isso irá criar algo assim:
 
 
@@ -71,4 +72,13 @@ Após o comando, ficaríamos assim:
 [master (root-commit) 7cd4606] comentarios das aulas
  1 file changed, 46 insertions(+)
   create mode 100644 arq1.txt
+
+
+Assim, toda vez que eu queria atualizar o arquivo, com o que foi alterado, basta eu fazer o add seguido do commit.
+
+
+$ git add arq1.txt
+$ git commit -m "inserido mais um comentario em relação as aulas"
+[master 8c0060d] inserido mais um comentario em relação as aulas
+ 1 file changed, 28 insertions(+)
 
