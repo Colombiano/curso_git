@@ -1,26 +1,29 @@
 esse eh meu arquivo
 
-Usei um $ echo "esse é meu arquivo" >> arq1.txt 
-para gerar a frase inicial e  colocar um conteúdo dentro do arq1.txt. Esse arquivo eu criei com um simples $ touch arq1.txt
+Usei um 
 
-Depois, para confirmar o que fiz,  dei  um 
+$echo "esse é meu arquivo" >> arq1.txt 
+
+Para gerar a frase inicial e colocar um conteúdo dentro do arq1.txt, criado anteriormente com um simples
+
+$ touch arq1.txt
+
+Depois, para confirmar o que fiz e ver o que o comando echo tinha gerado dentro do arquivo: 
 
 $cat arq1.txt
 
-Para ver o que o echo gerou dentro do arquivo e tudo que tiver dentro dele.
+Antes disso, da criação do arquivo (touch + echo), eu setei meu usuário no git usando os seguintes comando:
 
-Antes disso eu setei meu usuário no git usando o seguinte comando:
+$ git config --global user.name "meu_usuário_no_github"
+$ git config --global user.email "email_do_meu_usuário_no_git_hub"
 
-$ git config --global user.name "Colombiano"
-$ git config --global user.email "lpcolombiano@gmail.com"
-
-E depois criei uma pasta, na área de trabalho, chamada "curso_git". Foi nela que criei o arq1.txt, via touch.
+Na sequência criei uma pasta, na área de trabalho, chamada "curso_git". É nela onde encontra-se o arq1.txt.
 
 Em seguida, para transformar esse diretório em um repositório git, bastaria eu fazer:
 
 $ git init
 
-Estando dentro da pasta.
+Deve-se fazer isso estando dentro da pasta do seu repositório.
 
 Toda vez que eu quiser ver o status do meu repositório, basta eu fazer um:
 
@@ -38,12 +41,11 @@ Neste caso eu veria algo assim:
 #   arq1.txt
 nothing added to commit but untracked files present (use "git add" to track)
 
-Com isso eu percebo que meus arquivos, que no caso é um só, não encontra-se rastreado/ monitorado. Cada arquivo no git possui o chamado ciclo de vida do seu status. 
+Com isso eu percebo que meus arquivos, que no caso é um só, não encontra-se rastreado/ monitorado. Cada arquivo no git possui um chamado ciclo de vida do seu status. 
 
 Para colocar esse arquivo como monitorado/rastreado, basta fazer:
 
 $ git add arq1.txt
-
 
 Isso irá criar algo assim:
 
@@ -64,14 +66,14 @@ Fazemos isso com um:
 
 $ git commit - m "comentários das aulas"
 
-O -m significa mensagem
+O " -m" significa mensagem
 
 Após o comando, ficaríamos assim:
 
 
 [master (root-commit) 7cd4606] comentarios das aulas
  1 file changed, 46 insertions(+)
-  create mode 100644 arq1.txt
+   create mode 100644 arq1.txt
 
 
 Assim, toda vez que eu queria atualizar o arquivo, com o que foi alterado, basta eu fazer o add seguido do commit.
@@ -79,8 +81,9 @@ Assim, toda vez que eu queria atualizar o arquivo, com o que foi alterado, basta
 
 $ git add arq1.txt
 $ git commit -m "inserido mais um comentario em relação as aulas"
+
 [master 8c0060d] inserido mais um comentario em relação as aulas
- 1 file changed, 28 insertions(+)
+1 file changed, 28 insertions(+)
 
 Para ver todas as alterações já feitas neste repositório, bastaria eu fazer:
 
@@ -89,28 +92,26 @@ $ git log
 Que teria essa saída:
 
 
-commit 6c8ea10153d9929c387562a24c7064061ceea53e
-Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
-Date:   Sat Jun 3 12:03:14 2017 -0300
-
-    inserido um novo comentario em relação as aulas. Como add e commitar um arqu
-
-    commit 8c0060d7277cf5b7f3c6bb3ca8d36f9d7afacdf6
+    commit 6c8ea10153d9929c387562a24c7064061ceea53e
     Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
-    Date:   Sat Jun 3 11:58:11 2017 -0300
+    Date:   Sat Jun 3 12:03:14 2017 -0300
 
-        inserido mais um comentario em relação as aulas
+        inserido um novo comentario em relação as aulas. Como add e commitar um arqu
 
-        commit 7cd46063429aede459ae622b61734a64cabbefbd
-        Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
-        Date:   Sat Jun 3 11:53:44 2017 -0300
+            commit 8c0060d7277cf5b7f3c6bb3ca8d36f9d7afacdf6
+                Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
+                    Date:   Sat Jun 3 11:58:11 2017 -0300
 
-            comentarios das aulas
+                            inserido mais um comentario em relação as aulas
+
+                                    commit 7cd46063429aede459ae622b61734a64cabbefbd
+                                            Author: lpcolombiano@gmail.com <lpcolombiano@gmail.com>
+                                                    Date:   Sat Jun 3 11:53:44 2017 -0300
+
+                                                                comentarios das aulas
 
 
-Vemos que somente um usuário fez um commit. Mostra-se também a data, etc.
-
-Depois de criar no github um repositório, no caso "curso_git", eu tenho que apontar meu repositório local para o repositório criado.
+Vemos que somente um usuário fez um commit. Mostra-se também a data, etc. Depois de criar no github um repositório, no caso "curso_git", eu tenho que apontar meu repositório local para o repositório criado.
 
 Faço isso pegando o endereço (https ou ssh) do repositório criado.
 
@@ -124,6 +125,20 @@ $ git remote add origin https://github.com/Colombiano/curso_git.git
 Depois disso eu faria um:
 
 $ git push -u origin master
-
 Para jogar tudo no github.
+
+Teremos a seguinte saída:
+
+                                                                Username for 'https://github.com': Colombiano
+                                                                Password for 'https://Colombiano@github.com': 
+                                                                Counting objects: 15, done.
+                                                                Delta compression using up to 2 threads.
+                                                                Compressing objects: 100% (10/10), done.
+                                                                Writing objects: 100% (15/15), 2.66 KiB, done.
+                                                                Total 15 (delta 4), reused 0 (delta 0)
+                                                                remote: Resolving deltas: 100% (4/4), done.
+                                                                To https://github.com/Colombiano/curso_git.git
+                                                                 * [new branch]      master -> master
+                                                                 Branch master set up to track remote branch master from origin.
+
 
