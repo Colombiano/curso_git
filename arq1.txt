@@ -189,4 +189,40 @@ $ git log --stat
 
 Mais informações sobre git log podem ser vistas aqui: https://git-scm.com/book/pt-br/v1/Git-Essencial-Visualizando-o-Hist%C3%B3rico-de-Commits , que podem ser bem úteis.
 
+Crie, para testar como é feita a remoção de um arquivo, um arquivo codigo2.py. Fiz isso com um 
 
+$touch codigo2.py
+
+Depois fiz um 
+
+$ git commit -am "criado arquivo 2 de código"
+
+Seguido de um 
+
+$ git push origin master
+
+Para remover esse arquivo, primeiro eu remove ele localmente e depois no repositório virtual. Faço isso com:
+
+$ git rm codigo2.py
+
+Depois, só para confirmar, podemos fazer um status:
+
+$ git status
+
+Que terá a seguinte saída:
+
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	deleted:    codigo2.py
+#
+
+
+Depois eu realizo um commit sobre a remoção do arquivo
+
+$ git commit -m "arquivo codigo2.py deletado"
+
+E depois atualizo o repositório local com o do github.
+
+$ git push origin master
