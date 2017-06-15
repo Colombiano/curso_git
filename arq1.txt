@@ -154,6 +154,8 @@ Eu posso add vários arquivos por vez fazendo:
 
 $ git add .
 
+A área stage é onde ficam os arquivos que foram rastreados mas não foram gravadas no repositórios master. Cada vez que eu modifico o arquivo eu tenho que rastreado com o "add". Toda vez que eu mudo ele eu terei que rastrear ele novamente.
+
 Também é importante criar um gitignore para que eu tenha a possibilidade de ter arquivos ou diretórios no meu repositório local que eu não queria enviar para o meu repositório virtual.
 
 $ touch .gitignore
