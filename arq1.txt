@@ -165,9 +165,28 @@ Caso eu queria dizer que um arquivo ou diretório não suba para o github, basta
 $ echo "arquivo_que_existe_no_repositório_local_mas_que_não_quero_subir_para_o_repositório_virtual.c" >> .gitignore
 $ echo "diretório/" >> .gitignore (para adicionar um diretório que não quero subir)
 
+No nosso caso a gente criou um arquivo casinha.c e colocou o nome dele lá dentro do gitignore. Caso a gente abra o gitignore verá lá o nome do arquivo que está no diretório local mas que não foi realizado upload para o diretório virtual. De alguma maneira, antes de subir as coisas, o git olha para esse gitignore.
+
 $ git add . (rastreando tudo que tenho atualmente no meu repositório local)
 
 $ git commit -m "adicionado gitignore" (realizando o commit)
 
 $ git push -u origin master
+
+Para rastrear e realizar um commit de uma única vez basta ey fazer um
+
+$ git commit -am "comentário que quero fazer" sendo a relativo "a"relativo ao add/rastrear e "m" relativo a commit.
+
+Poderia ver partes do log. Para isso bastaria eu fazer um 
+
+$ git log -n 3 . Com isso eu iria ver apenas os três últimos commit do meu log. E assim sucessivamente. Outra possiblidde seria ver um resumo dos meus commit em apenas um única linha
+
+$ git log --oneline
+
+Outra forma interessante é vermos cada commit, de forma abreviada, a lista dos arquivos que foram modificados, quantos arquivos foram modificados, e quantas linhas nestes arquivos foram adicionadas e removidas. Ele ainda mostra um resumo destas informações no final.
+
+$ git log --stat
+
+Mais informações sobre git log podem ser vistas aqui: https://git-scm.com/book/pt-br/v1/Git-Essencial-Visualizando-o-Hist%C3%B3rico-de-Commits , que podem ser bem úteis.
+
 
