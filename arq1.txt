@@ -226,3 +226,20 @@ $ git commit -m "arquivo codigo2.py deletado"
 E depois atualizo o repositório local com o do github.
 
 $ git push origin master
+
+Eu posso mudar um nome de qualquer um dos arquivos do meu repositório dando um simples "mv". Faria isso assim:
+
+$ git mv arq1.txt novo_arquivo.txt
+
+Seu eu desse um
+
+$ git status
+
+Eu veria, na tela, que o arquivo teria sofrido um "rename".
+
+Depois eu teria que realizar um commit, como de praxe, seguido de um push origin
+
+$ git commit -m "renomeando nome do arq1 para novo_arquivo"
+$ git push origin master
+
+
