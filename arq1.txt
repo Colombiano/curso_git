@@ -255,3 +255,9 @@ https://git-scm.com/book/pt-br/v2/Git-Tools-Reset-Demystified
 $ git reset --hard
 
 Esse reset ele retira tudo que estiver no stage e retroage tudo que tinha sido modificada recentemente tudo que estiver no nosso arquivos.
+
+Algumas opções ao github:
+
+- Gitlab: Antigo Gitorius.
+- Bitbucket : Pode criar repositórios privados gratuitos.
+- https://savannah.gnu.org/ : A melhor alternativa para licenças FSF.
