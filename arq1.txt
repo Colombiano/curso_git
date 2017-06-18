@@ -242,4 +242,16 @@ Depois eu teria que realizar um commit, como de praxe, seguido de um push origin
 $ git commit -m "renomeando nome do arq1 para novo_arquivo"
 $ git push origin master
 
+Existe uma forma de você desfazer modificações nos arquivos que não foram rastreados. Vale para qualquer mudança.
 
+$ git checkout -- arq1.txt
+
+No caso, se eu tivesse modificado o arq1.txt depois que eu modifiquei o nome dele para novo_arquivo, ele voltaria a ter o mesmo nome de antes. Veja que isso só vale se eu não tivesse feito nem o "git add" e nem o "git commit".
+
+Para mudanças realizadas em arquivos rastreados (que sofrearam o git add) eu poderia realizar o reset e seus vários modos. Todos esses modos podem ser vistos aqui:
+
+https://git-scm.com/book/pt-br/v2/Git-Tools-Reset-Demystified
+
+$ git reset --hard
+
+Esse reset ele retira tudo que estiver no stage e retroage tudo que tinha sido modificada recentemente tudo que estiver no nosso arquivos.
