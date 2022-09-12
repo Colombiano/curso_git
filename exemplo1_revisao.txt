@@ -1,0 +1,6 @@
+apenas colocando com o echo um pouco de dados no arquivo criado no bash emulado pelo git no Windows
+coisas loucas acontecem
+comportamento estranho
+comportamento estranho
+casa amarela
+vou colocar mais conteúdo no meu arquivo texto, para mostrar como eu faço alterações e commit's no git
