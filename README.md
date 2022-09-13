@@ -1,5 +1,5 @@
 # curso_git
-This is an repository of Udemy's of Git course, taught by for Marcos Castro, in portuguese along with charpters of an Book —licensed under Creative Commons Attribution NonCommercial-ShareAlike 3— called "Pro Git" (2004, Apress), written by by Scott Chacon and Ben Straub
+This is an repository of Udemy's of Git course, taught by for Marcos Castro, in portuguese along with charpters of an Book —licensed under Creative Commons Attribution NonCommercial-ShareAlike 3— called "Pro Git" (2004, Apress), written by by Scott Chacon and Ben Straub https://git-scm.com/book/pt-br/v2
 
 I did this study in the already distant year of 2017 and now, at the end of this long winter of 2022, between Rio and Bahia, I am doing a major review.
 
